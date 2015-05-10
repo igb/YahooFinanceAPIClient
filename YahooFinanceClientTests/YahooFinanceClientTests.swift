@@ -8,6 +8,7 @@
 
 import Cocoa
 import XCTest
+import YahooFinanceClient
 
 class YahooFinanceClientTests: XCTestCase {
     
@@ -31,6 +32,12 @@ class YahooFinanceClientTests: XCTestCase {
         self.measureBlock() {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testBasicCall() {
+        var client = YahooFinanceClient();
+        var price = client.getLatestPrice("twtr");
+        XCTAssertNotNil(price, "Latest price should not be nil.");
     }
     
 }

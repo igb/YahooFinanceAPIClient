@@ -10,6 +10,8 @@
 		10AB63A71AFE5E6400AFF9C0 /* YahooFinanceClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 10AB63A61AFE5E6400AFF9C0 /* YahooFinanceClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10AB63AD1AFE5E6400AFF9C0 /* YahooFinanceClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10AB63A11AFE5E6400AFF9C0 /* YahooFinanceClient.framework */; };
 		10AB63B41AFE5E6500AFF9C0 /* YahooFinanceClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AB63B31AFE5E6500AFF9C0 /* YahooFinanceClientTests.swift */; };
+		10AB63BE1AFE618600AFF9C0 /* YahooFinanceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AB63BD1AFE618600AFF9C0 /* YahooFinanceClient.swift */; };
+		10AB63BF1AFE618600AFF9C0 /* YahooFinanceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AB63BD1AFE618600AFF9C0 /* YahooFinanceClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 		10AB63AC1AFE5E6400AFF9C0 /* YahooFinanceClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YahooFinanceClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10AB63B21AFE5E6500AFF9C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10AB63B31AFE5E6500AFF9C0 /* YahooFinanceClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahooFinanceClientTests.swift; sourceTree = "<group>"; };
+		10AB63BD1AFE618600AFF9C0 /* YahooFinanceClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YahooFinanceClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,7 @@
 			children = (
 				10AB63A61AFE5E6400AFF9C0 /* YahooFinanceClient.h */,
 				10AB63A41AFE5E6400AFF9C0 /* Supporting Files */,
+				10AB63BD1AFE618600AFF9C0 /* YahooFinanceClient.swift */,
 			);
 			path = YahooFinanceClient;
 			sourceTree = "<group>";
@@ -209,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10AB63BE1AFE618600AFF9C0 /* YahooFinanceClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10AB63BF1AFE618600AFF9C0 /* YahooFinanceClient.swift in Sources */,
 				10AB63B41AFE5E6500AFF9C0 /* YahooFinanceClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +324,7 @@
 		10AB63B81AFE5E6500AFF9C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -329,12 +336,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		10AB63B91AFE5E6500AFF9C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
